@@ -1,12 +1,12 @@
 import socket
 
 #ip address and port number for the connection
-serverip = None
+serverip = '85.103.110.149'
 serverport = 12000
 
 #creating a socket and listening for connections
 serversocket = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
-serversocket.bind((serverIP, serverPort))
+serversocket.bind((serverip, serverport))
 serversocket.listen(1)
 
 	
@@ -14,7 +14,7 @@ while True:
     #accepting incoming connection
 	clientsocket, address = serversocket.accept()
 
-    print('Connected to %s' % address)
+    #print('Connected to {adress}'.format(adress))
 	
     clientsocket.send(bytes('Sending file...', 'utf-8'))
 
