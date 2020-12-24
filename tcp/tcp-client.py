@@ -14,7 +14,8 @@ while True:
     try:
         print("Receiving data...")
         data = s.recv(1024)
-
+    except:
+        print("Error at recieving!!")
     if not data:
         break
     print("Data=%s",  (data))
