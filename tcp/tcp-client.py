@@ -1,22 +1,23 @@
 import socket
 
+
 # Host ip adress and port
-port = 8081
-host = None
+port = 12000
+host = "192.168.56.1"
 
 #Connection and saving location
-s = socket.socket()
-s.connect((host, port))
+socket_ = socket.socket()
+socket_.connect((host, port))
 f = open("/Users/alpha/Desktop/CS447/test.txt",'wb')
 
 #Getting data
 while True:
     try:
         print("Receiving data...")
-        data = s.recv(1024)
+        data = socket_.recv(1024)
     except:
         print("Error at recieving!!")
     if not data:
         break
-    print("Data=%s",  (data))
+    print("Data=",data)
     f.write(data)
