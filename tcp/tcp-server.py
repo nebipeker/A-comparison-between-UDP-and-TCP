@@ -12,8 +12,8 @@ serversocket.listen(1)
 	
 while True:
     #accepting incoming connection
-	clientsocket, address = serversocket.accept()
-	
+    clientsocket, address = serversocket.accept()
+
     clientsocket.send(bytes('Sending file...', 'utf-8'))
 
     filename = 'data.txt' #must be in the same folder with tcp-server.py
