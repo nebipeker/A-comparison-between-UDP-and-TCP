@@ -1,31 +1,28 @@
 import socket
 import base64
-
 from sys import getsizeof
-
-def chunks(maxBufferSize, listOfLines):
-    toSend = []
-    while listOfLines:
-        if(toSend):
-            if((getsizeof(listOfLines[0])+getsizeof(toSend[-1])) <= maxBufferSize):
-                toSend[-1] = toSend[-1] + listOfLines.pop(0)
-            else:
-                toSend.append(listOfLines.pop(0))
-        else:
-            toSend.append(listOfLines.pop(0))
-    return toSend
 
 FILENAME = 'zoo.txt'
 BUFFER_SIZE = 512
 
-with open(FILENAME) as f:
-    lines = f.readlines()
+def chunks(text, maxBufferSize):
+    i = 0
+    string = ''
+    while i < maxBufferSize:
+        string = string + '.'
+        i = getsizeof(string)
+    print(text)
+    splitted = [text[0+m:len(string)+m] for m in range(0, len(text),len(string))]
+    return splitted
 
-groupLines = chunks(BUFFER_SIZE, lines)
+toSend = open(FILENAME, 'rb').read()
+toSend = toSend*1000
 
-for line in groupLines:
+lines = chunks(toSend,BUFFER_SIZE)
+
+for line in lines:
     udpclient = socket.socket(family=socket.AF_INET, type=socket.SOCK_DGRAM)
-    udpclient.sendto(str.encode(line), ("127.0.0.1", 20001))
+    udpclient.sendto(line, ("127.0.0.1", 20001))
     message = udpclient.recvfrom(BUFFER_SIZE)
     message_bytes = base64.b64decode(message[0])
     print((message_bytes.decode('ascii')))
