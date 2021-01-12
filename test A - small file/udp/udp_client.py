@@ -2,7 +2,7 @@ import socket
 import base64
 from sys import getsizeof
 
-FILENAME = 'zoo.txt'
+FILENAME = 'data.txt'
 BUFFER_SIZE = 512
 
 def chunks(text, maxBufferSize):
@@ -16,7 +16,7 @@ def chunks(text, maxBufferSize):
     return splitted
 
 toSend = open(FILENAME, 'rb').read()
-toSend = toSend*1000
+
 
 lines = chunks(toSend,BUFFER_SIZE)
 
