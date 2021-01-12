@@ -1,0 +1,4 @@
+test B udp 692 toplam paket ile gönderdi ack ve datagramlar dahil
+bir datagram 495 b uzunluğunda
+ack 49
+datası 463 byte

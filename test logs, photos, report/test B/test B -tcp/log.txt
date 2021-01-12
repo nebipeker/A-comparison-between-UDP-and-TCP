@@ -1,0 +1,6 @@
+tcp.dstport == 12000 || tcp.srcport == 12000 tcp için filitreleme
+çok daha uzun 
+288 toplam paket ve ack sayısı
+yine tcp handshake ve fin olayları oluyor.
+bir datagram 1068 uzunlukta
+ack 44 uzunlukta 

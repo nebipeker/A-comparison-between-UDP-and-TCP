@@ -1,0 +1,5 @@
+2 tane cmd ile açmak gerekti
+tcp A düzgün çalıştıpını görmek için fazla küçük dosya
+
+
+adapter for loop back capture da geçti bunlar

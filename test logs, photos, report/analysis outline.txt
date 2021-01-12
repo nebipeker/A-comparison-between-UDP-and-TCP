@@ -1,0 +1,38 @@
+introduction
+		[talk about UDP and TCP and how they work in theory. What we plan to get 		with this tests. ]
+		Tell what is UDP and TCP is, how they work and why are we doing this test.
+		See and inspect them while they work. And point out their differences.
+
+setup		[Talk about python scripts and how they work. The data we are sending. And 		how are we observing these tests. Explain wireshark]
+
+testing
+		[Explain the number of tests that we are conducting.]
+
+test results
+
+		[Summarize the test results. Include a detailed description of any 				deviations from the original test plan, design, test case, or 					expected results. Include any issues or bugs discovered during the test.]
+
+conclusion
+
+                [Describe the insights you got from these results.]
+
+
+UDP -> chunk'lara bölüyor 
+
+ileriki dönemlerinde slide'ı örneği gösterebilir.
+proje olarak ödev olarak verebilir 
+
+tcp ve udp'nin farklarını highlight etme
+
+Socket library, base64 library pyhton 3.9
+ udp için buffersize’a göre datayı chunklara böylen, o chunk’ları gönderdik. 
+
+
+
+test 3 test 
+
+test results grafikleri ve geçmişi göster 
+
+udp'nin chunk olarak gönderilmesi 
+
+conclusion conclusion

@@ -1,0 +1,4 @@
+shits fucked
+udp.srcport == 20001|| udp.dstport == 20001 ile filitreledik.
+adapter loop back capture da bende
+3 tane paket halinde göndermiş ilk A'yı
