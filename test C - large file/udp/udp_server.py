@@ -15,7 +15,7 @@ def chunks(text, maxBufferSize):
     return splitted
 
 toSend = open(FILENAME, 'rb').read()
-lines = chunks(toSend,BUFFER_SIZE)
+lines = chunks(toSend,BUFFER_SIZE-100)
 udpserver = socket.socket(family=socket.AF_INET, type=socket.SOCK_DGRAM)
 udpserver.bind(("127.0.0.1", 20001))
 

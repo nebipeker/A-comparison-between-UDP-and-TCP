@@ -11,6 +11,7 @@ serversocket.listen(1)
 
 
 while True:
+    print('Listening for incoming connections...')
     #accepting incoming connection
     clientsocket, address = serversocket.accept()
 

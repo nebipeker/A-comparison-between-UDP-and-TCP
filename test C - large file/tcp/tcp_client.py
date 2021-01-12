@@ -7,7 +7,7 @@ host = '127.0.0.1'
 #Connection and saving location
 socket_ = socket.socket()
 socket_.connect((host, port))
-f = open("test.txt", 'wb')
+f = open("output.txt", 'wb')
 print("Transfer initiated")
 
 #Getting data
