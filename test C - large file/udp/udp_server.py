@@ -11,6 +11,6 @@ while(True):
     msg,ip = udpserver.recvfrom(BUFFER_SIZE)
     udpserver.sendto(content_bytes, ip)
     print("UDP CLIENT MESSAGE:")
-    print(msg.decode('utf-8'))
+    ## print(msg.decode('utf-8'))
     print("CLIENT IP:",ip)
 
