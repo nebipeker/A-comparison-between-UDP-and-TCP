@@ -25,7 +25,10 @@ while(True):
     for num,line in enumerate(lines): 
         msg,ip = udpserver.recvfrom(BUFFER_SIZE)
         content_bytes = base64.encodebytes(line)
-        if(num == len(lines)-1):
-            content_bytes = base64.encodebytes(str.encode('UDP SERVER'))
         udpserver.sendto(content_bytes, ip)
         print("CLIENT IP AND PORT:",ip)
+        if(num == len(lines)-1):
+            content_bytes = base64.encodebytes(str.encode('UDP SERVER'))
+            msg,ip = udpserver.recvfrom(BUFFER_SIZE)
+            udpserver.sendto(content_bytes, ip)
+            print("CLIENT IP AND PORT:",ip)
