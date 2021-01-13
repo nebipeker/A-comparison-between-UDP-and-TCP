@@ -17,6 +17,6 @@ while True:
     except:
         print("Error! Transfer failed")
     if not data:
+        print("Transfer complete")
         break
     f.write(data)
-    print("Transfer complete")

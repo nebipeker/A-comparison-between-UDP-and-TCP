@@ -19,6 +19,8 @@ lines = chunks(toSend,BUFFER_SIZE-100)
 udpserver = socket.socket(family=socket.AF_INET, type=socket.SOCK_DGRAM)
 udpserver.bind(("127.0.0.1", 20001))
 
+print('UDP Server is running')
+
 while(True):
     for num,line in enumerate(lines): 
         msg,ip = udpserver.recvfrom(BUFFER_SIZE)

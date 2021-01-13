@@ -13,3 +13,4 @@ while(codecs.decode(message_bytes, 'latin1')!="UDP SERVER"):
     message_bytes = base64.b64decode(message[0])
     f.write(message_bytes)
 f.close()
+print('File received')
