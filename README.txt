@@ -15,11 +15,3 @@ to correctly complete the file transfrers, for both udp and tcp file pairs, you 
 Once a pair is correctly started up they will begin transmitting data.txt file . 
 
 The transmission will be observeble from Wireshark. 
-
-[wireshark da nereden görebileceğini göster ethernet değil biri virtual box biri de başka bir yer]
-
-[Wireshark da nasıl onları filitreliyebileceğini göster.] 
-
-[Ayarları falan değiştirmen gerekir mi onu söyle] 
-
-[Hangi graphları gösterebiliyor neyi görebiliyorsun]
